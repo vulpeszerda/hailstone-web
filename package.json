@@ -1,0 +1,22 @@
+{
+  "name": "hailstone",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.4",
+    "express": "~4.13.4",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "less-middleware": "~2.0.1",
+    "socket.io": "~1.4.5",
+    "underscore": "~1.8.3",
+    "mstsc.js": "~0.2.4",
+    "node-rdpjs": ">=0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+<div id="page-home">
+    <header class="page-header clearfix">
+        <a class="btn-back" ng-if="playingApp" ng-click="hideApp()"><i class="glyphicons glyphicons-remove-2"></i></a>
+        <div class="header-title"><span ng-if="!playingApp">Trending</span><span ng-if="playingApp">{{playingApp.name}}</span></div>
+    </header>
+    <main class="page-main">
+        <div class="apps container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-lg-1" ng-repeat="app in apps | filter:search track by app.id">
+                    <a class="app" ng-click="app.play()">
+                        <div class="clearfix">
+                            <div class="thumb">
+                                <img ng-src="{{app.thumbUrl}}"/>
+                                <div class="selector"></div>
+                            </div>
+                            <div class="name">{{app.name}}</div>
+                            <div class="company">{{app.company}}</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="app-screen" ng-show="playingApp">
+        <canvas id="app-canvas"></canvas>
+    </div>
+</div>
+

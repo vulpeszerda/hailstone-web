@@ -1,0 +1,5 @@
+*.swp
+*.swo
+.DS_Store
+debug_log
+public/bower_components
