@@ -9,6 +9,10 @@ var APP = (function(app) {
             'hsConstants'
         ]);
 
+    app.config(function() {
+        new WOW().init();
+    });
+
     app.config(['$provide', function($provide) {
         $provide.decorator('$state', function($delegate, $stateParams) {
             $delegate.forceReload = function() {
@@ -60,7 +64,7 @@ var APP = (function(app) {
                 .state('pageHome', {
                     parent: 'app',
                     url: '/',
-                    templateUrl: 'partials/page_home.html',
+                    templateUrl: 'partials/page_app_store.html',
                     controller: 'PageHome'
                 })
 

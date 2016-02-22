@@ -1,0 +1,502 @@
+<div id="page-appstore" ng-show="!playingApp">
+    <div class="sp-body">
+    <header class="header pageRow overflow-visible">
+        <div class="wrapper">
+            <div class="header-outer">
+                <div class="header-inner">
+                    <div class="header-top row innerPageHeader">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><a href="." class="logo"></a></div>
+                        <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+                            <div class="description">Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="pageTitleBox" class="pageRow paralax skew skew-bottom customBgColor trianglifyBox">
+        <div class="wrapper">
+            <div class="row">
+                <div class="heightTitleBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1 class="page-title ralewayLight whiteTxtColor">Newest Apps</h1>
+                </div>
+            </div>
+        </div>
+        <div class="skew_appended whiteSection"></div>
+    </section>
+    <section id="appSliderBox" class="pageRow mainStore">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                    <div id="owl-apps" class="owl-carousel white-control apps-slider">
+                        <div class="app-item wow fadeInLeft" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="preview-item grayBgApp center-block">
+                                <div class="preview-item_header">
+                                    <img ng-src="{{apps[0].thumbUrl}}" alt="App">
+                                    <a class="preview-item_hover whiteTxtColor robotoLight" ng-click="apps[0].play()" data-toggle="lightbox" data-gallery="newest-apps" data-title="{{apps[0].name}}"><i class="fa fa-search"></i></a>
+                                </div>
+                                <div class="preview-item_body">				
+                                    <span class="colorIcon redBgColor"><i class="fa fa-comment whiteTxtColor"></i></span>
+                                    <h4 class="preview-item_title">
+                                        <a href="app-details.html" class="ralewaySemiBold blackTxtColor" ng-click="apps[0].play()">{{apps[0].name}}</a>
+                                    </h4>
+                                    <ul class="rating">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="preview-item_pricebox clear">{{apps[0].company}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-item wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="preview-item grayBgApp center-block">
+                                <div class="preview-item_header">
+                                    <img ng-src="{{apps[1].thumbUrl}}" alt="App">
+                                    <a class="preview-item_hover whiteTxtColor robotoLight" ng-click="apps[1].play()" data-toggle="lightbox" data-gallery="newest-apps" data-title="{{apps[1].name}}"><i class="fa fa-search"></i></a>
+                                </div>
+                                <div class="preview-item_body">
+                                    <span class="colorIcon purpleBgColor"><i class="fa fa-camera whiteTxtColor"></i></span>
+                                    <h4 class="preview-item_title">
+                                        <a href="app-details.html" class="ralewaySemiBold blackTxtColor">{{apps[1].name}}</a>
+                                    </h4>
+                                    <ul class="rating">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="preview-item_pricebox clear">{{apps[1].company}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-item wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="preview-item grayBgApp center-block">
+                                <div class="preview-item_header">
+                                    <img ng-src="{{apps[2].thumbUrl}}" alt="App">
+                                    <a class="preview-item_hover whiteTxtColor robotoLight" ng-click="apps[2].play()" data-toggle="lightbox" data-gallery="newest-apps" data-title="{{apps[2].name}}"><i class="fa fa-search"></i></a>
+                                </div>
+                                <div class="preview-item_body">
+                                    <span class="colorIcon greenBgColor"><i class="fa fa-map-marker whiteTxtColor"></i></span>
+                                    <h4 class="preview-item_title">
+                                        <a href="app-details.html" class="ralewaySemiBold blackTxtColor">{{apps[2].name}}</a>
+                                    </h4>
+                                    <ul class="rating">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="preview-item_pricebox clear">{{apps[2].company}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-item wow fadeInRight" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="preview-item grayBgApp center-block">
+                                <div class="preview-item_header">
+                                    <img ng-src="{{apps[3].thumbUrl}}" alt="App">
+                                    <a class="preview-item_hover whiteTxtColor robotoLight" ng-click="apps[3].play()" data-toggle="lightbox" data-gallery="newest-apps" data-title="{{apps[3].name}}"><i class="fa fa-search"></i></a>
+                                </div>
+                                <div class="preview-item_body">
+                                    <span class="colorIcon blueBgColor"><i class="fa fa-download whiteTxtColor"></i></span>
+                                    <h4 class="preview-item_title">
+                                        <a href="app-details.html" class="ralewaySemiBold blackTxtColor">{{apps[3].name}}</a>
+                                    </h4>
+                                    <ul class="rating">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                    <div class="preview-item_pricebox clear">{{apps[3].company}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="storeContentBox" class="pageRow storeContent">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-xs-12 clearfix">
+                    <div class="pageRow row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                            <div class="staffPicksBox pageRow">
+                                <h3 class="pageSectionTitle bigTxt text-center text-uppercase ralewayBold clear blackTxtColor wow bounceIn" data-wow-delay="0.3s" data-wow-iteration="1">Staff Picks</h3>
+                                <ul class="staff-picks-list">
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInLeft" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[4].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[4].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[4].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[4].company}}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[5].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[5].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[5].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[5].company}}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInRight" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[6].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[6].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[6].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[6].company}}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInLeft" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[7].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[7].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[7].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[7].company}}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[8].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[8].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[8].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[8].company}}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="staff-picks_item wow fadeInRight" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[9].play()">
+                                            <span class="staff-picks_item_icon">
+                                                <img ng-src="{{apps[9].thumbUrl}}" alt="App">
+                                            </span>
+                                            <span class="staff-picks_item_name ralewayBold blackTxtColor">{{apps[9].name}}</span>
+                                            <span class="staff-picks_item_price robotoCondensed text-uppercase">{{apps[9].company}}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>					
+            </div>
+        </div>
+    </section>
+    <section id="trendingApps" class="pageRow skew paralax skew-top full-width-slider-controls customBgColor trianglifyBox">
+        <div class="wrapper">
+            <div class="trendingAppsBox row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix staticBox">
+                    <h3 class="reviews-title whiteTxtColor raleway text-center membersArrow">Trending Apps</h3>
+                    <div id="owl-trending" class="owl-carousel white-control member-full-width staticBox">
+                        <div class="trending-item center-block wow fadeInLeft" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[10].play()">
+                            <img ng-src="{{apps[10].thumbUrl}}" alt="App">
+                            <div class="trending-item_footer">
+                                <span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calendar whiteTxtColor"></i></span>
+                                <span class="trending-item_name ralewayBold whiteTxtColor">{{apps[10].name}}</span>
+                                <span class="trending-item_price robotoCondensed">{{apps[10].company}}</span>
+                            </div>
+                        </div>
+                        <div class="trending-item center-block wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[11].play()">
+                            <img ng-src="{{apps[11].thumbUrl}}" alt="App">
+                            <div class="trending-item_footer">
+                                <span class="colorIcon smallIcon greenBgColor"><i class="fa fa-bullseye whiteTxtColor"></i></span>
+                                <span class="trending-item_name ralewayBold whiteTxtColor">{{apps[11].name}}</span>
+                                <span class="trending-item_price robotoCondensed">{{apps[11].company}}</span>
+                            </div>
+                        </div>
+                        <div class="trending-item center-block wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[12].play()">
+                            <img ng-src="{{apps[12].thumbUrl}}" alt="App">
+                            <div class="trending-item_footer">
+                                <span class="colorIcon smallIcon yellowBgColor"><i class="fa fa-mobile whiteTxtColor"></i></span>
+                                <span class="trending-item_name ralewayBold whiteTxtColor">{{apps[12].name}}</span>
+                                <span class="trending-item_price robotoCondensed">{{apps[12].company}}</span>
+                            </div>
+                        </div>
+                        <div class="trending-item center-block wow fadeInRight" data-wow-delay="0.3s" data-wow-iteration="1" ng-click="apps[13].play()">
+                            <img ng-src="{{apps[13].thumbUrl}}" alt="App">
+                            <div class="trending-item_footer">
+                                <span class="colorIcon smallIcon pinkBgColor"><i class="fa fa-calculator whiteTxtColor"></i></span>
+                                <span class="trending-item_name ralewayBold whiteTxtColor">{{apps[13].name}}</span>
+                                <span class="trending-item_price robotoCondensed">{{apps[13].company}}</span>
+                            </div>
+                        </div>
+                        <div class="trending-item center-block" ng-click="apps[14].play()">
+                            <img ng-src="{{apps[14].thumbUrl}}" alt="App">
+                            <div class="trending-item_footer">
+                                <span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calendar whiteTxtColor"></i></span>
+                                <span class="trending-item_name ralewayBold whiteTxtColor">{{apps[14].name}}</span>
+                                <span class="trending-item_price robotoCondensed">{{apps[14].company}}</span>
+                            </div>
+                        </div>							
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skew_prepended whiteSection reverse"></div>
+    </section>
+    <section id="recommendedApps" class="pageRow">
+        <div class="wrapper">
+            <div class="recommendedBox pageRow">
+                <h3 class="pageSectionTitle clear text-center text-uppercase ralewayBold blackTxtColor wow bounceIn" data-wow-delay="0.3s" data-wow-iteration="1">RECOMMENDED APPS</h3>
+                <div class="recommendedAppsItems">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block wow fadeInLeft" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="app-product-item_header">
+                                <img ng-src="{{apps[15].thumbUrl}}" alt="App">
+                                <a ng-click="apps[15].play()" class="app-product-item_header-link whiteTxtColor" data-title="{{apps[15].name}}" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon pinkBgColor"><i class="fa fa-lightbulb-o whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a ng-click="apps[15].play()" class="ralewayBold blackTxtColor">{{apps[15].name}}</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">{{apps[15].name}}</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a ng-click="apps[15].play()" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="app-product-item_header">
+                                <img ng-src="{{apps[16].thumbUrl}}" alt="App">
+                                <a ng-click="apps[16].play()" class="app-product-item_header-link whiteTxtColor" data-title="{{apps[16].name}}" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon yellowBgColor"><i class="fa fa-clock-o whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a ng-click="apps[16].play()" class="ralewayBold blackTxtColor">{{apps[16].name}}</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">{{apps[16].company}}</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a ng-click="apps[16].play()" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block wow fadeInUp" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="app-product-item_header">
+                                <img ng-src="{{apps[17].thumbUrl}}" alt="App">
+                                <a ng-click="apps[17].play()" class="app-product-item_header-link whiteTxtColor" data-title="{{apps[17].name}}" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon greenBgColor"><i class="fa fa-bar-chart whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">{{apps[17].name}}</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">{{apps[17].company}}</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a ng-click="apps[17].play()" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block wow fadeInRight" data-wow-delay="0.3s" data-wow-iteration="1">
+                            <div class="app-product-item_header">
+                                <img ng-src="{{apps[18].thumbUrl}}" alt="App">
+                                <a ng-click="apps[18].play()" class="app-product-item_header-link whiteTxtColor" data-title="{{apps[18].name}}" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon purpleBgColor"><i class="fa fa-briefcase whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">{{apps[18].name}}</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">{{apps[18].company}}</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a ng-click="apps[18].play()" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block animated hidden">
+                            <div class="app-product-item_header">
+                                <img src="media/270x180/1.jpg" alt="App Product">
+                                <a href="media/270x180/1.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Sci Calculator" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calculator whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">Sci Calculator</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+                                        <i class="fa fa-shopping-cart customColor"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block animated hidden">
+                            <div class="app-product-item_header">
+                                <img src="media/270x180/2.jpg" alt="App Product">
+                                <a href="media/270x180/2.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Baby Names" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon greenBgColor"><i class="fa fa-paper-plane-o whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">Baby Names</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+                                        <i class="fa fa-shopping-cart customColor"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block animated hidden">
+                            <div class="app-product-item_header">
+                                <img src="media/270x180/3.jpg" alt="App Product">
+                                <a href="media/270x180/3.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Alarm ON" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon purpleBgColor"><i class="fa fa-clock-o whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">Alarm ON</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+                                        <i class="fa fa-shopping-cart customColor"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+                        <div class="app-product-item center-block animated hidden">
+                            <div class="app-product-item_header">
+                                <img src="media/270x180/4.jpg" alt="App Product">
+                                <a href="media/270x180/4.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Cool Dialer" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+                            </div>
+                            <div class="app-product-item_body clearfix">
+                                <span class="colorIcon smallIcon blueBgColor"><i class="fa fa-phone whiteTxtColor"></i></span>
+                                <h4 class="app-product-item_body_title">
+                                    <a href="app-details.html" class="ralewayBold blackTxtColor">Cool Dialer</a>
+                                </h4>
+                                <div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+                                <ul class="rating pull-right">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <div class="app-product-item_body_btnbox">
+                                    <a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+                                        <i class="fa fa-shopping-cart customColor"></i>
+                                        Add to cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="pageRow skew skew-top darkFooter">
+        <a id="scrollTop" href="#" class="goToTop whiteTxtColor"><i class="fa fa-angle-up"></i></a>
+        <div class="pageRow footerBottom">
+            <div class="wrapper">
+                <div class="footerV2Box row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
+                        <div class="copyrightV2Txt robotoLight whiteTxtColor wow bounceIn pull-left" data-wow-delay="0.3s" data-wow-iteration="1">Copyright &copy; 2016. Hailstone</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skew_prepended graySection"></div>
+    </footer>
+    </div>
+
+    <script src="template/js/jquery.placeholder.min.js"></script>
+    <script src="template/js/jquery-ui.min.js"></script>
+    <script src="template/js/classie.js"></script>
+    <!--Owl Carousel-->		
+    <script src="template/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!--THEME-->
+    <script src="template/js/cssua.min.js"></script>
+    <script src="template/js/func.js"></script>        
+</div>
+<div id="page-remote" ng-show="playingApp">
+    <header class="actionbar-header transparent clearfix">
+        <div class="bg"></div>
+        <a class="btn-back" ng-click="hideApp()"><i class="glyphicons glyphicons-remove-2"></i></a>
+        <div class="actionbar-title" ng-if="playingApp">{{playingApp.name}}</div>
+    </header>
+    <div class="app-screen">
+        <canvas id="app-canvas"></canvas>
+    </div>
+</div>

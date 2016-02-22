@@ -68,6 +68,7 @@
     module.controller('PageHome', [
         '$rootScope', '$scope', '$stateParams',
         function($rootScope, $scope, $stateParams) {
+
             var canvasId = 'app-canvas';
             var canvas = Mstsc.$(canvasId);
             //360x532
@@ -109,6 +110,10 @@
                 $scope.apps.push(new App(idx + 1, d));
             });
 
+            $.each($scope.apps, function(idx, app) {
+                $scope.apps.push(app);
+            });
+
             $scope.playingApp = null;
             $scope.hideApp = function() {
                 rdpClient.disconnect();
@@ -132,7 +137,7 @@
                     CONN_INFO.password, 
                     function (err) {
                         if (err) {
-                            alert(JSON.stringify(err));
+                            alert('Failed to connect to server');
                             rdpClient.disconnect();
                             $scope.playingApp = null;
                             $scope.$apply();

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hailstone</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+		<link href="css/master.css" rel="stylesheet">
+
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="animated-css">
+		<div class="sp-body">
+		<header class="header pageRow overflow-visible">
+			<div class="wrapper">
+				<div class="header-outer">
+					<div class="header-inner">
+						<div class="header-top row innerPageHeader">
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6"><a href="." class="logo"></a></div>
+							<div class="col-lg-9 col-md-9 col-sm-6 col-xs-6">
+								<i class="fa fa-bars mobileMenuNav whiteTxtColor"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section id="pageTitleBox" class="pageRow paralax skew skew-bottom customBgColor trianglifyBox">
+			<div class="wrapper">
+				<div class="row">
+					<div class="heightTitleBox col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h1 class="page-title ralewayLight whiteTxtColor">Newest Apps</h1>
+					</div>
+				</div>
+			</div>
+			<div class="skew_appended whiteSection"></div>
+		</section>
+		<section id="appSliderBox" class="pageRow mainStore">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+						<div id="owl-apps" class="owl-carousel white-control apps-slider">
+							<div class="app-item wow fadeInLeft" data-wow-delay="0.3s">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/1.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/1.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="Sports iPhone App"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">				
+										<span class="colorIcon redBgColor"><i class="fa fa-comment whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">Sports iPhone App</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price robotoCondensed blackTxtColor">$5.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-item wow fadeInUp" data-wow-delay="0.3s">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/2.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/2.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="Auto HDR Cam"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">
+										<span class="colorIcon purpleBgColor"><i class="fa fa-camera whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">Auto HDR Cam</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price robotoCondensed blackTxtColor">Free</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-item wow fadeInUp" data-wow-delay="0.3s">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/3.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/3.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="ATM Weather"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">
+										<span class="colorIcon greenBgColor"><i class="fa fa-map-marker whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">ATM Weather</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price robotoCondensed blackTxtColor">$5.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-item wow fadeInRight" data-wow-delay="0.3s">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/4.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/4.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="Download Manager"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">
+										<span class="colorIcon blueBgColor"><i class="fa fa-download whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">Download Manager</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price through robotoCondensed blackTxtColor">$5.00</span>
+											<span class="preview-item_price robotoCondensed blackTxtColor">Free</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-item">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/1.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/1.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="Sports iPhone App"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">				
+										<span class="colorIcon redBgColor"><i class="fa fa-comment whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">Sports iPhone App</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price robotoCondensed blackTxtColor">$5.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="app-item">
+								<div class="preview-item grayBgApp center-block">
+									<div class="preview-item_header">
+										<img src="media/270x300/3.jpg" alt="App">
+										<a class="preview-item_hover whiteTxtColor robotoLight" href="media/270x300/3.jpg" data-toggle="lightbox" data-gallery="newest-apps" data-title="ATM Weather"><i class="fa fa-search"></i></a>
+									</div>
+									<div class="preview-item_body">
+										<span class="colorIcon greenBgColor"><i class="fa fa-map-marker whiteTxtColor"></i></span>
+										<h4 class="preview-item_title">
+											<a href="app-details.html" class="ralewaySemiBold blackTxtColor">ATM Weather</a>
+										</h4>
+										<ul class="rating">
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li class="active"><i class="fa fa-star"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+										<div class="preview-item_pricebox clear">
+											<span class="preview-item_price robotoCondensed blackTxtColor">$5.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="storeContentBox" class="pageRow storeContent">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-xs-12 clearfix">
+						<div class="pageRow row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+								<div class="staffPicksBox pageRow">
+									<h3 class="pageSectionTitle bigTxt text-center text-uppercase ralewayBold clear blackTxtColor wow bounceIn" data-wow-delay="0.3s">Staff Picks</h3>
+									<ul class="staff-picks-list">
+										<li>
+											<div class="staff-picks_item wow fadeInLeft" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon yellowBgColor">
+													<i class="fa fa-bullseye whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">Data Counter</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">$5.00</span>
+											</div>
+										</li>
+										<li>
+											<div class="staff-picks_item wow fadeInUp" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon blueBgColor">
+													<i class="fa fa-tablet whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">iPod Sync</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">$5.00</span>
+											</div>
+										</li>
+										<li>
+											<div class="staff-picks_item wow fadeInRight" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon redBgColor">
+													<i class="fa fa-line-chart whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">Business Pro</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">free</span>
+											</div>
+										</li>
+										<li>
+											<div class="staff-picks_item wow fadeInLeft" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon pinkBgColor">
+													<i class="fa fa-building-o whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">Office Finder</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">$5.00</span>
+											</div>
+										</li>
+										<li>
+											<div class="staff-picks_item wow fadeInUp" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon purpleBgColor">
+													<i class="fa fa-desktop whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">iTunes Sync</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">free</span>
+											</div>
+										</li>
+										<li>
+											<div class="staff-picks_item wow fadeInRight" data-wow-delay="0.3s">
+												<span class="staff-picks_item_icon greenBgColor">
+													<i class="fa fa-gavel whiteTxtColor"></i>
+												</span>
+												<span class="staff-picks_item_name ralewayBold blackTxtColor">Lawyers Dir.</span>
+												<span class="staff-picks_item_price robotoCondensed text-uppercase">$5.00</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</section>
+		<section id="trendingApps" class="pageRow skew paralax skew-top full-width-slider-controls customBgColor trianglifyBox">
+			<div class="wrapper">
+				<div class="trendingAppsBox row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix staticBox">
+						<h3 class="reviews-title whiteTxtColor raleway text-center membersArrow">Trending Apps</h3>
+						<span class="reviews-subtitle robotoLight whiteTxtColor text-center">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+						<div id="owl-trending" class="owl-carousel white-control member-full-width staticBox">
+							<div class="trending-item center-block wow fadeInLeft" data-wow-delay="0.3s">
+								<img src="media/270x225/1.jpg" alt="App">
+								<div class="trending-item_footer">
+									<span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calendar whiteTxtColor"></i></span>
+									<span class="trending-item_name ralewayBold whiteTxtColor">iFon Calender</span>
+									<span class="trending-item_price robotoCondensed">FREE</span>
+								</div>
+							</div>
+							<div class="trending-item center-block wow fadeInUp" data-wow-delay="0.3s">
+								<img src="media/270x225/2.jpg" alt="App">
+								<div class="trending-item_footer">
+									<span class="colorIcon smallIcon greenBgColor"><i class="fa fa-bullseye whiteTxtColor"></i></span>
+									<span class="trending-item_name ralewayBold whiteTxtColor">Puzzle Geniee</span>
+									<span class="trending-item_price robotoCondensed">In-App Purchase</span>
+								</div>
+							</div>
+							<div class="trending-item center-block wow fadeInUp" data-wow-delay="0.3s">
+								<img src="media/270x225/3.jpg" alt="App">
+								<div class="trending-item_footer">
+									<span class="colorIcon smallIcon yellowBgColor"><i class="fa fa-mobile whiteTxtColor"></i></span>
+									<span class="trending-item_name ralewayBold whiteTxtColor">iPod Sync</span>
+									<span class="trending-item_price robotoCondensed">FREE</span>
+								</div>
+							</div>
+							<div class="trending-item center-block wow fadeInRight" data-wow-delay="0.3s">
+								<img src="media/270x225/4.jpg" alt="App">
+								<div class="trending-item_footer">
+									<span class="colorIcon smallIcon pinkBgColor"><i class="fa fa-calculator whiteTxtColor"></i></span>
+									<span class="trending-item_name ralewayBold whiteTxtColor">Sci Calculator</span>
+									<span class="trending-item_price robotoCondensed">In-App Purchase</span>
+								</div>
+							</div>
+							<div class="trending-item center-block">
+								<img src="media/270x225/1.jpg" alt="App">
+								<div class="trending-item_footer">
+									<span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calendar whiteTxtColor"></i></span>
+									<span class="trending-item_name ralewayBold whiteTxtColor">iFon Calender</span>
+									<span class="trending-item_price robotoCondensed">FREE</span>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="skew_prepended whiteSection reverse"></div>
+		</section>
+		<section id="recommendedApps" class="pageRow">
+			<div class="wrapper">
+				<div class="recommendedBox pageRow">
+					<h3 class="pageSectionTitle clear text-center text-uppercase ralewayBold blackTxtColor wow bounceIn" data-wow-delay="0.3s">RECOMMENDED APPS</h3>
+					<div class="recommendedAppsItems">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block wow fadeInLeft" data-wow-delay="0.3s">
+								<div class="app-product-item_header">
+									<img src="media/270x180/7.jpg" alt="App Product">
+									<a href="media/270x180/7.jpg" class="app-product-item_header-link whiteTxtColor" data-title="iFon Tricks" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon pinkBgColor"><i class="fa fa-lightbulb-o whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">iFon Tricks</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block wow fadeInUp" data-wow-delay="0.3s">
+								<div class="app-product-item_header">
+									<img src="media/270x180/8.jpg" alt="App Product">
+									<a href="media/270x180/8.jpg" class="app-product-item_header-link whiteTxtColor" data-title="MC StopWatch" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon yellowBgColor"><i class="fa fa-clock-o whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">MC StopWatch</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block wow fadeInUp" data-wow-delay="0.3s">
+								<div class="app-product-item_header">
+									<img src="media/270x180/9.jpg" alt="App Product">
+									<a href="media/270x180/9.jpg" class="app-product-item_header-link whiteTxtColor" data-title="EM Graphs" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon greenBgColor"><i class="fa fa-bar-chart whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">EM Graphs</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block wow fadeInRight" data-wow-delay="0.3s">
+								<div class="app-product-item_header">
+									<img src="media/270x180/10.jpg" alt="App Product">
+									<a href="media/270x180/10.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Toolbox Lite" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon purpleBgColor"><i class="fa fa-briefcase whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">Toolbox Lite</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block animated hidden">
+								<div class="app-product-item_header">
+									<img src="media/270x180/1.jpg" alt="App Product">
+									<a href="media/270x180/1.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Sci Calculator" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon blueBgColor"><i class="fa fa-calculator whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">Sci Calculator</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block animated hidden">
+								<div class="app-product-item_header">
+									<img src="media/270x180/2.jpg" alt="App Product">
+									<a href="media/270x180/2.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Baby Names" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon greenBgColor"><i class="fa fa-paper-plane-o whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">Baby Names</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block animated hidden">
+								<div class="app-product-item_header">
+									<img src="media/270x180/3.jpg" alt="App Product">
+									<a href="media/270x180/3.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Alarm ON" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon purpleBgColor"><i class="fa fa-clock-o whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">Alarm ON</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 clearfix">
+							<div class="app-product-item center-block animated hidden">
+								<div class="app-product-item_header">
+									<img src="media/270x180/4.jpg" alt="App Product">
+									<a href="media/270x180/4.jpg" class="app-product-item_header-link whiteTxtColor" data-title="Cool Dialer" data-gallery="recommended-apps" data-toggle="lightbox"><i class="fa fa-search"></i></a>
+								</div>
+								<div class="app-product-item_body clearfix">
+									<span class="colorIcon smallIcon blueBgColor"><i class="fa fa-phone whiteTxtColor"></i></span>
+									<h4 class="app-product-item_body_title">
+										<a href="app-details.html" class="ralewayBold blackTxtColor">Cool Dialer</a>
+									</h4>
+									<div class="app-product-item_body_price robotoCondensed pull-left">$5.00</div>
+									<ul class="rating pull-right">
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li class="active"><i class="fa fa-star"></i></li>
+										<li><i class="fa fa-star"></i></li>
+									</ul>
+									<div class="app-product-item_body_btnbox">
+										<a href="app-details.html" class="ellipseLink addToCartBtn robotoMedium text-uppercase hvr-pop">
+											<i class="fa fa-shopping-cart customColor"></i>
+											Add to cart
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer" class="pageRow skew skew-top darkFooter">
+			<a id="scrollTop" href="#" class="goToTop whiteTxtColor"><i class="fa fa-angle-up"></i></a>
+			<div class="pageRow footerBottom">
+				<div class="wrapper">
+					<div class="footerV2Box row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
+							<div class="copyrightV2Txt robotoLight whiteTxtColor wow bounceIn pull-left" data-wow-delay="0.3s">Copyright &copy; 2016. Hailstone</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="skew_prepended graySection"></div>
+		</footer>
+		</div>
+
+		<script src="js/jquery.placeholder.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/classie.js"></script>
+		<!--Owl Carousel-->		
+	    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+		<!--THEME-->
+		<script src="js/wow.min.js"></script>
+		<script src="js/cssua.min.js"></script>
+        <script src="js/func.js"></script>        
+	</body>
+</html>

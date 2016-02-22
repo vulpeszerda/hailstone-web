@@ -24,6 +24,7 @@ app.use(cookieParser());
 app.use('/public', require('less-middleware')(path.join(__dirname, 'public')));
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/partials', express.static(path.join(__dirname, 'partials')));
+app.use('/template', express.static(path.join(__dirname, 'template')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
