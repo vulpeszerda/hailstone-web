@@ -66,9 +66,12 @@
         }]);
 
     module.controller('PageHome', [
-        '$rootScope', '$scope', '$stateParams',
-        function($rootScope, $scope, $stateParams) {
+        '$rootScope', '$scope', '$stateParams', '$http',
+        function($rootScope, $scope, $stateParams, $http) {
 
+            var _executeTimer = null;
+            var _pingTimer = null;
+            var _pingInterval = null;
             var canvasId = 'app-canvas';
             var canvas = Mstsc.$(canvasId);
             //360x532
@@ -92,16 +95,26 @@
             $rootScope.preventScroll = false;
             
             var data = [
-                ["YouTube","Google Inc.", "https://lh5.ggpht.com/jZ8XCjpCQWWZ5GLhbjRAufsw3JXePHUJVfEvMH3D055ghq0dyiSP3YxfSc_czPhtCLSO=w300-rw"],
-                ["TechCrunch", "AOL Inc.", "https://lh3.ggpht.com/hXd3jGoc_BlPm_LnlO70HmXQKqnWgYZBpChbLqvzlnwI0-XgxznKN_oGASz9QSo3Vl8=w300-rw"],
-                ["Flipboard", "Flipboard", "https://lh4.ggpht.com/bT2W_cLEBJ58KwL3F9N3FfecplkcC4RaB-OFpA120dp8MBfiHOo6W0yXhaY6I5yD7Ck=w300-rw"],
-                ["Hotel Tonight", "HotelTonight", "https://lh3.googleusercontent.com/S9OjloXq6cHRtthVAhMrhM-A0zSYyYYwdjJXG77TXLpUjJJ8Qk7sbIkkad2bgGdUfZA=w300-rw"],
-                ["Airbnb", "Airbnb, Inc", "https://lh6.ggpht.com/4jnm0-_9TBUdvNtQpefYE0T33a0iAx8AuovO3Uncs1nsSkKhjNc-SbIKFhiSBpYJl5q4=w300-rw"],
-                ["Angry Birds", "Rovio Entertainment Ltd.", "https://lh6.ggpht.com/M9q_Zs_CRt2rbA41nTMhrPqiBxhUEUN8Z1f_mn9m89_TiHbIbUF8hjnc_zwevvLsRIJy=w300-rw"],
-                ["Stick Hero", "Ketchapp", "https://lh3.ggpht.com/Ph8XvfIqCZNMBH7ltkulP-iqL4OcmSKArZTj99EVhPSXvaIfEotwVQ8Rt-OfNBou3_8B=w300-rw"],
-                ["Fancy", "thingd", "https://lh4.ggpht.com/tFqu6Gx6xjemZSicG_xvZqrQGaQcgw4CTZCr-x6EqbE2V-DCp6NpPtml2TKSGodAfpU=w300-rw"],
-                ["Vimeo", "Vimeo Mobile", "https://lh3.googleusercontent.com/hIckHVP84kogkZ7yGwlMZD8xPnJBDkS_EntshszgtI4kJK0_uCCpbqcuX0GLnJUvN3k=w300-rw"],
-                ["Etsy", "Etsy, Inc", "https://lh4.ggpht.com/xomNZkhkqLxKLV9Gb11fACyLh7DhMDcSPFjYLvilAKbEFZmlwYbmqB3Bu-49h3yi-1A=w300-rw"]
+                ["YouTube","Google Inc.", "/public/images/wish.JPG"],
+                ["TechCrunch", "AOL Inc.", "/public/images/techcrunch.JPG"],
+                ["Flipboard", "Flipboard", "/public/images/flipboard.JPG"],
+                ["Hotel Tonight", "HotelTonight", "/public/images/hoteltonight.JPG"],
+                ["Airbnb", "Airbnb, Inc", "/public/images/airbnb.JPG"],
+                ["Angry Birds", "Rovio Entertainment Ltd.", "/public/images/angrybirds.JPG"],
+                ["Stick Hero", "Ketchapp", "/public/images/stickhero.JPG"],
+                ["Fancy", "thingd", "/public/images/fancy.JPG"],
+                ["Vimeo", "Vimeo Mobile", "/public/images/vimeo.JPG"],
+                ["Etsy", "Etsy, Inc", "/public/images/etsy.JPG"],
+                ["CNET", "", "/public/images/cnet.JPG"],
+                ["Duolingo Learn Languages Free", "", "/public/images/duolingo.JPG"],
+                ["Fitbit", "", "/public/images/fitbit.JPG"],
+                ["Goal live scores", "", "/public/images/goalscore.JPG"],
+                ["Marvel Comics", "", "/public/images/marvelavengers.JPG"],
+                ["Shazam", "", "/public/images/shazam.JPG"],
+                ["Soundcloud", "", "/public/images/soundcloud.JPG"],
+                ["Avengers Iron Man Mark VII", "", "/public/images/marvelavengers.JPG"],
+                ["Twilight", "", "/public/images/twilight.JPG"],
+                ["Wish", "", "/public/images/wish.JPG"],
             ];
 
             $scope.apps = []; 
@@ -116,35 +129,54 @@
 
             $scope.playingApp = null;
             $scope.hideApp = function() {
-                rdpClient.disconnect();
-                $scope.playingApp = null;
-                $rootScope.preventScroll = false;
+                disconnect();
             }
-            $scope.showApp = function(appId) {
-                $scope.playingApp = $scope.apps[appId - 1];
-                $rootScope.preventScroll = true;
 
-                canvas.style.display = 'inline';
-                canvas.width = Math.max(window.innerWidth, 800);
-                canvas.height = Math.max(window.innerHeight, 600);
-                setTimeout(function() {
-                    repositionCanvas();
-                }, 500);
-                rdpClient.connect(
-                    CONN_INFO.ip, 
-                    CONN_INFO.domain, 
-                    CONN_INFO.username, 
-                    CONN_INFO.password, 
-                    function (err) {
-                        if (err) {
-                            alert('Failed to connect to server');
-                            rdpClient.disconnect();
-                            $scope.playingApp = null;
+            $scope.showApp = function(appId) {
+                $scope.showProgress = true;
+                $http({
+                    method:'GET',
+                    url: '/api/vm/acquire/'
+                }).then(function(response) {
+                    $scope.showProgress = false;
+                    if (!response.data || response.data.split(',').length < 2) {
+                        alert('Failed to acquire machine. Invalid response.');
+                        return;
+                    }
+
+                    var token = response.data.split(',');
+
+                    $scope.playingApp = $scope.apps[appId - 1];
+                    $rootScope.preventScroll = true;
+
+                    canvas.style.display = 'inline';
+                    canvas.width = Math.max(window.innerWidth, 800);
+                    canvas.height = Math.max(window.innerHeight, 600);
+                    setTimeout(function() {
+                        repositionCanvas();
+                    }, 500);
+
+                    rdpClient._vmName = token[0];
+                    rdpClient.connect(
+                        CONN_INFO.ip, 
+                        token[1],
+                        CONN_INFO.domain, 
+                        CONN_INFO.username, 
+                        CONN_INFO.password, 
+                        function() {
+                            executeApp($scope.apps[appId - 1], 60);
+                            ping();
+                        }, function (err) {
+                            disconnect(err);
                             $scope.$apply();
-                            $rootScope.preventScroll = false;
                             $rootScope.$apply();
-                        }
-                    });
+                        });
+
+                }, function(response) {
+                    $scope.showProgress = false;
+                    alert('Failed to acquire machine. Please try again later.');
+                    disconnect();
+                });
             };
 
             function App(id, data) {
@@ -156,6 +188,74 @@
                 this.play = function() {
                     $scope.showApp(id);
                 };
+            }
+
+            function disconnect(err) {
+                if (err) {
+                    alert('Failed to connect to server');
+                }
+                if (_executeTimer) {
+                    clearTimeout(_executeTimer);
+                }
+
+                if (_pingTimer) {
+                    clearTimeout(_pingTimer);
+                }
+                rdpClient.disconnect();
+                $scope.playingApp = null;
+                $rootScope.preventScroll = false;
+
+                if (rdpClient._vmName) {
+                    $http.get('/api/vm/release/', {
+                        params: {
+                            name: rdpClient._vmName
+                        }
+                    });
+                    rdpClient._vmName = null;
+                }
+            }
+
+            function ping() {
+                if (!rdpClient._vmName) {
+                    return;
+                }
+                if (_pingTimer) {
+                    clearTimeout(_pingTimer);
+                }
+                $http.get('/api/vm/ping/', {
+                    params: {
+                        name:rdpClient._vmName
+                    }
+                }).then(function() {
+                    _pingTimer = setTimeout(function() {
+                        ping();
+                    }, 30000);
+                });
+            }
+
+            function executeApp(app, count) {
+                if (_executeTimer) {
+                    clearTimeout(_executeTimer);
+                }
+                if (!rdpClient._vmName) {
+                    return;
+                }
+                $http({
+                    method:'GET',
+                    url:'/api/vm/execute/',
+                    params: {
+                        name:rdpClient._vmName,
+                        idx: app.id - 1
+                    }
+                }).then(function(response) {
+                    if (count > 0) {
+                        _executeTimer = setTimeout(function() {
+                            executeApp(app, count - 1);
+                        }, 1000);
+                    }
+                }, function(response) {
+
+                });
             }
 
         }]);
