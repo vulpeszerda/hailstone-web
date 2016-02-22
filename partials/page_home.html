@@ -1,5 +1,6 @@
 <div id="page-home">
-    <header class="page-header clearfix">
+    <header class="page-header clearfix" ng-class="{'transparent':  playingApp}">
+        <div class="bg"></div>
         <a class="btn-back" ng-if="playingApp" ng-click="hideApp()"><i class="glyphicons glyphicons-remove-2"></i></a>
         <div class="header-title"><span ng-if="!playingApp">Trending</span><span ng-if="playingApp">{{playingApp.name}}</span></div>
     </header>

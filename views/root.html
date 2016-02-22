@@ -69,7 +69,7 @@
 
         <base href="/">
     </head>
-    <body id="{{bodyId}}" class="{{bodyClass.join(' ')}}">
+    <body id="{{bodyId}}" class="{{bodyClass.join(' ')}}" ng-class="{'prevent-scroll': preventScroll}">
         <div class="frame" ui-view/>
     </body>
 </html>

@@ -70,6 +70,7 @@
         function($rootScope, $scope, $stateParams) {
             var canvasId = 'app-canvas';
             var canvas = Mstsc.$(canvasId);
+            //360x532
             var rdpClient = Mstsc.client.create(canvas);
             var CONN_INFO = {
                 ip: '112.169.127.123',
@@ -78,7 +79,16 @@
                 password: ''
             };
 
+            function repositionCanvas() {
+                var canvas = $('#app-canvas');
+                canvas.css('marginLeft', -1 * canvas.width() / 2);
+                canvas.css('marginTop', -1 * canvas.height() / 2);
+            }
+
+            $(window).on('resize.home', repositionCanvas);
+
             $rootScope.pageTitle = 'Home';
+            $rootScope.preventScroll = false;
             
             var data = [
                 ["YouTube","Google Inc.", "https://lh5.ggpht.com/jZ8XCjpCQWWZ5GLhbjRAufsw3JXePHUJVfEvMH3D055ghq0dyiSP3YxfSc_czPhtCLSO=w300-rw"],
@@ -101,17 +111,20 @@
 
             $scope.playingApp = null;
             $scope.hideApp = function() {
+                rdpClient.disconnect();
                 $scope.playingApp = null;
-                if (rdpClient.socket) {
-                    rdpClient.socket.emit('disconnect');
-                }
+                $rootScope.preventScroll = false;
             }
             $scope.showApp = function(appId) {
                 $scope.playingApp = $scope.apps[appId - 1];
+                $rootScope.preventScroll = true;
 
                 canvas.style.display = 'inline';
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                canvas.width = Math.max(window.innerWidth, 800);
+                canvas.height = Math.max(window.innerHeight, 600);
+                setTimeout(function() {
+                    repositionCanvas();
+                }, 500);
                 rdpClient.connect(
                     CONN_INFO.ip, 
                     CONN_INFO.domain, 
@@ -120,8 +133,11 @@
                     function (err) {
                         if (err) {
                             alert(JSON.stringify(err));
+                            rdpClient.disconnect();
                             $scope.playingApp = null;
                             $scope.$apply();
+                            $rootScope.preventScroll = false;
+                            $rootScope.$apply();
                         }
                     });
             };
